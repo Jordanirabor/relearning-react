@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class App extends Component {
+export default class App extends React.Component {
 
   constructor() {
     super();
-    this.state = {
-      monsters: [
-        {
-          name: "Frankeinstein",
-          id: 1
-        },
-        {
-          name: "Dracula",
-          id: 2
-        },
-        {
-          name: "Zombie",
-          id: 3
-        }
-      ]
-    }
 
+    this.state = {
+      monsters: []
+    }
+  }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users').then(
+      response => response.json()
+    ).then(users => this.setState({ monsters: users }))
   }
 
   render() {
