@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Writing Pure React</title>
+</head>
+
+<body>
+    <div id="root">
+        React is not rendered :(
+    </div>
+</body>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script>
+    const Person = (props) => {
+        return React.createElement("div", {}, [
+            React.createElement("h1", {}, props.name),
+            React.createElement("p", {}, props.occupation)
+        ])
+    }
+
+    class App extends React.Component {
+        render() {
+            return React.createElement("div", {}, React.createElement("div", {}, [
+                React.createElement("h1", {}, "Here's a list of awesome developers:"),
+                React.createElement(Person, {
+                    name: "Everistus",
+                    occupation: "Frontend engineer"
+                }),
+                React.createElement(Person, {
+                    name: "Trojan",
+                    occupation: "DevOps engineer"
+                }),
+                React.createElement(Person, {
+                    name: "Neo",
+                    occupation: "Fullstack engineer"
+                }),
+            ]))
+        }
+    }
+
+    ReactDOM.render(React.createElement(App), document.getElementById('root'))
+</script>
+
+</html>
