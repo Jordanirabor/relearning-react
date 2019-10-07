@@ -29,6 +29,7 @@ export default class App extends React.Component {
 
     return (
       <div className="App">
+      <h1> Monsters Rolodex </h1>
       <SearchBox placeholder="search for monsters" handleChange={this.handleChange}/>
         <CardList monsters={filteredMonsters} />
       </div>
