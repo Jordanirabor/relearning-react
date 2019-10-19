@@ -4,12 +4,10 @@ import './App.css';
 
 export default class App extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
+    state = {
       meaningOfLife: 47 + this.props.increment
     }
-  }
+  
 
   handleClick = () => {
     this.setState((prevState, prevProps) => {
