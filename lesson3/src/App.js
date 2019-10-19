@@ -1,21 +1,25 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-export default class App extends Component{
+export default class App extends Component {
 
-  constructor(){
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-      meaningOfLife: 47
+      meaningOfLife: 47 + this.props.increment
     }
   }
 
   handleClick = () => {
-    this.setState({meaningOfLife: this.state.meaningOfLife + 1})
+    this.setState((prevState, prevProps) => {
+     return {meaningOfLife: prevState.meaningOfLife + 1}
+    }, () => {
+      console.log(this.state.meaningOfLife)
+    })
   }
 
-  render(){
+  render() {
     return (<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -27,6 +31,7 @@ export default class App extends Component{
           Increment
         </button>
       </header>
-    </div>)}
+    </div>)
+  }
 }
 
