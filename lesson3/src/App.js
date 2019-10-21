@@ -5,7 +5,7 @@ import './App.css';
 export default class App extends Component {
 
     state = {
-      meaningOfLife: 47 + this.props.increment
+      meaningOfLife: 47
     }
   
 
