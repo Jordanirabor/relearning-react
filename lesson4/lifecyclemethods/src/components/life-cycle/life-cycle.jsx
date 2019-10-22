@@ -10,6 +10,19 @@ export default class LifeCycles extends React.Component{
         console.log('componentDidMount!')
     }
 
+    componentDidUpdate(){
+    console.log('componentDidUpdate!')
+    }
+
+    componentWillUnmount(){
+    console.log('componentWillUnmount!')
+    }
+
+    shouldComponentUpdate(nextProps, nextState){
+    console.log('shouldComponentUpdate', nextProps)
+    return true
+    }
+
     render(){
         console.log('render!')
         return(
