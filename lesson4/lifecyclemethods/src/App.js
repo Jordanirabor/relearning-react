@@ -22,7 +22,7 @@ class App extends React.Component {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <button onClick={() => this.setState(state => ({showLifeCycleMethods: !state.showLifeCycleMethods}))}>
-          Toggle Life Methods
+          Toggle LifeCycle Methods
         </button>
         <button onClick={() => this.setState(state => ({
           text: state.text + ' _hello'
