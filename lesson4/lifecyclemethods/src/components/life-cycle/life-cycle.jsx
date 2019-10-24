@@ -26,7 +26,7 @@ export default class LifeCycles extends React.Component{
     render(){
         console.log('render!')
         return(
-            <div>Hey</div>
+            <div>Hey, pass some text in me</div>
         )
     }
 }
