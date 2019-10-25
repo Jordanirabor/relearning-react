@@ -31,7 +31,7 @@ class App extends React.Component {
         </button>
 
         {this.state.text}
-      {this.state.showLifeCycleMethods ? <LifeCycles /> : null}
+      {this.state.showLifeCycleMethods ? <LifeCycles text={this.state.text} /> : null}
       </header>
     </div>
   )
