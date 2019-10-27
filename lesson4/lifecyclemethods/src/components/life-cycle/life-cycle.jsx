@@ -19,6 +19,7 @@ export default class LifeCycles extends React.Component{
 
     componentWillUnmount(){
     console.log('componentWillUnmount!')
+    // This is where you want to free up memory or erase code that isn't needed anymore and can't be accessed by the garbage collector
     }
 
     shouldComponentUpdate(nextProps, nextState){
