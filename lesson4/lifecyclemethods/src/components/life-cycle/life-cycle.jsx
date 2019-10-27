@@ -20,7 +20,7 @@ export default class LifeCycles extends React.Component{
 
     shouldComponentUpdate(nextProps, nextState){
     console.log('shouldComponentUpdate', nextProps)
-    return true
+    return this.props.text !== nextProps.text;
     }
 
     render(){
