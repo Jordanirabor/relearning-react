@@ -25,7 +25,7 @@ class App extends React.Component {
           Toggle LifeCycle Methods
         </button>
         <button onClick={() => this.setState(state => ({
-          text: state.text
+          text: state.text + '_hello'
         }))}>
           Append string
         </button>
