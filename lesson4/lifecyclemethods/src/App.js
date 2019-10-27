@@ -29,8 +29,6 @@ class App extends React.Component {
         }))}>
           Append string
         </button>
-
-        {this.state.text}
       {this.state.showLifeCycleMethods ? <LifeCycles text={this.state.text} /> : null}
       </header>
     </div>
