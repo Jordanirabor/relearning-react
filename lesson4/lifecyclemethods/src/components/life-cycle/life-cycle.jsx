@@ -25,6 +25,7 @@ export default class LifeCycles extends React.Component{
     shouldComponentUpdate(nextProps, nextState){
     console.log('shouldComponentUpdate', nextProps)
     return this.props.text !== nextProps.text;
+    // This is where we decide if a component should update or not based on some condition.
     }
 
     render(){
