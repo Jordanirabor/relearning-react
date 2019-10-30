@@ -4,7 +4,7 @@ import Homepage from './homepage.component.jsx'
 function App() {
   return (
     <div>
-    <Homepage />
+    <Homepage></Homepage>
     </div>
   );
 }
