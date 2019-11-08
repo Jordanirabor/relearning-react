@@ -13,7 +13,7 @@ export default class ShopPage extends React.Component {
     render() {
         return (
             <div>
-                {this.state.collections.map(({ id, title, ...otherCollectionsProps }) => <CollectionPreview key={id} title={title} {...otherCollectionsProps} />)}
+                {this.state.collections.map(({ id, ...otherCollectionsProps }) => <CollectionPreview key={id} {...otherCollectionsProps} />)}
             </div>
         )
     }
