@@ -2,10 +2,16 @@ import React from 'react'
 
 const CollectionPreview = ({ title, items }) => (
     <div className="collection-preview">
-        <h2 className="title">
-            {title}
-        </h2>
-        {items.filter((item, idx) => idx < 4).map(({ id, name }) => <p key={id}> {name}</p>)}
+        <h1 className="title">
+            {title.toUpperCase()}
+        </h1>
+        <div className='preview'>
+            {items
+                .filter((item, idx) => idx < 4)
+                .map(({ id, name }) =>
+                    <div key={id}> {name}</div>
+                )}
+        </div>
     </div>
 )
 
