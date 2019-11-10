@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../assets/logo/crown.svg'
 
 const Header = () => (
@@ -18,7 +18,6 @@ const Header = () => (
                 CONTACT
         </Link>
         </div>
-
     </div>
 )
 
