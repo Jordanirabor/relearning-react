@@ -4,14 +4,6 @@ import ShopPage from './pages/shop/shop.component'
 import Header from './components/header/header.component'
 import { Switch, Route } from 'react-router-dom';
 
-function Hats() {
-  return (
-    <div>
-      HATS
-    </div>
-  )
-}
-
 function App() {
   return (
     <div>
