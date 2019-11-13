@@ -32,7 +32,7 @@ export default class SignIn extends React.Component {
                     <input type="email" name="email" placeholder="Email" value={this.state.email} required onChange={this.handleChange} />
                     <label>Email</label>
                     <input type="password" name="password" placeholder="Password" value={this.state.password} required onChange={this.handleChange} />
-                    <label>Email</label>
+                    <label>Password</label>
                     <input type="submit" placeholder="Submit" />
                 </form>
             </div>
