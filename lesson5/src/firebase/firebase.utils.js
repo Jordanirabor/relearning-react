@@ -3,14 +3,14 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 const config = {
-    apiKey: "AIzaSyArer6-y6AYH5RqFOIz8uDg4J9kY5Bhz5U",
-    authDomain: "crown-db-769bf.firebaseapp.com",
-    databaseURL: "https://crown-db-769bf.firebaseio.com",
-    projectId: "crown-db-769bf",
-    storageBucket: "crown-db-769bf.appspot.com",
-    messagingSenderId: "481134728109",
-    appId: "1:481134728109:web:bbdfb7696d0ca02b3d0724",
-    measurementId: "G-C75PMZ1ESK"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
 firebase.initializeApp(config);
