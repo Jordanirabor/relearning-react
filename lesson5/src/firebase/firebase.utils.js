@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 
-config = {
+const config = {
     apiKey: "AIzaSyArer6-y6AYH5RqFOIz8uDg4J9kY5Bhz5U",
     authDomain: "crown-db-769bf.firebaseapp.com",
     databaseURL: "https://crown-db-769bf.firebaseio.com",
@@ -20,7 +20,7 @@ export const firestore = firebase.firestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ "prompt": "select_account" })
 
-export const SignInWithGoogle = () => auth.signInWithPopUp(provider)
+export const signInWithGoogle = () => auth.signInWithPopup(provider)
 
 export default firebase;
 
