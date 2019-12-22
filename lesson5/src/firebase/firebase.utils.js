@@ -43,7 +43,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         }
     }
 
-    return userRef
+    return userRef 
 }
 
 export const signInWithGoogle = () => auth.signInWithPopup(provider)
