@@ -7,7 +7,6 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 
 class App extends React.Component {
-
   constructor() {
     super();
 
@@ -34,9 +33,9 @@ class App extends React.Component {
       }
       this.setState({ currentUser: userAuth })
     })
-
   }
 
+  // unsubscribe the user from FireBase's authentication before the component is removed from the DOM
   componentWillUnmount() {
     this.unsubscribeFromAuth()
   }
@@ -53,7 +52,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 export default App;
