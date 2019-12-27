@@ -15,4 +15,12 @@ class SignUp extends React.Component {
             confirmPassword: ''
         }
     }
+
+    render() {
+        return (
+            <div className="sign-up">
+
+            </div>
+        )
+    }
 }
