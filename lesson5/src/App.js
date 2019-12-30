@@ -21,7 +21,6 @@ class App extends React.Component {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
 
-        // get the userRef from firestore using the createUserProfileDocument() method
         const userRef = await createUserProfileDocument(userAuth)
 
         userRef.onSnapshot(snapShot => {
@@ -32,12 +31,12 @@ class App extends React.Component {
             }
           })
         })
+
       }
       this.setState({ currentUser: userAuth })
     })
   }
 
-  // unsubscribe the user from FireBase's authentication before the component is removed from the DOM
   componentWillUnmount() {
     this.unsubscribeFromAuth()
   }
