@@ -19,7 +19,7 @@ export default class SignIn extends React.Component {
         this.setState({ [name]: value })
     }
 
-    handleSubmit = e => {
+    handleSubmit = async e => {
         e.preventDefault();
 
         const { email, password } = this.state
@@ -45,7 +45,7 @@ export default class SignIn extends React.Component {
                     <FormInput type="email" name="email" value={this.state.email} label="Email" required handleChange={this.handleChange} />
                     <FormInput type="password" name="password" value={this.state.password} label="Password" required handleChange={this.handleChange} />
                     <CustomButton type="submit">Sign In</CustomButton>
-                    <CustomButton onClick={signInWithGoogle}>Sign In With Google</CustomButton>
+                    <CustomButton otherClassName="sign-in-with-google" onClick={signInWithGoogle}>Sign In With Google</CustomButton>
                 </form>
             </div>
         )
